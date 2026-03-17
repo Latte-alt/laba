@@ -164,6 +164,7 @@ ip route 0.0.0.0 0.0.0.0 10.0.12.1
 ip route 192.168.30.0 255.255.255.0 10.0.12.1
 
 ip access-list extended VLAN20_LIMIT
+ permit udp any eq bootpc any eq bootps
  deny ip 192.168.20.0 0.0.0.255 192.168.10.0 0.0.0.255
  deny ip 192.168.20.0 0.0.0.255 192.168.30.0 0.0.0.255
  permit ip 192.168.20.0 0.0.0.255 any
@@ -210,6 +211,7 @@ ip route 192.168.10.0 255.255.255.0 10.0.13.1
 ip route 192.168.20.0 255.255.255.0 10.0.13.1
 
 ip access-list extended VLAN30_LIMIT
+ permit udp any eq bootpc any eq bootps
  deny ip 192.168.30.0 0.0.0.255 192.168.10.0 0.0.0.255
  deny ip 192.168.30.0 0.0.0.255 192.168.20.0 0.0.0.255
  permit ip 192.168.30.0 0.0.0.255 any
